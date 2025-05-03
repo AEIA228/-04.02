@@ -48,7 +48,7 @@
 
 Эти факторы делают **Windows PowerShell** оптимальным выбором для специалистов, которым требуется гибкость и мощные инструменты для управления безопасностью сети.
 ## 3. Установка и базовая настройка
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/ae427ba5-6ea1-4a91-94d9-bb9222b49077)
 ## 4. Конфигурация правил доступа
 ### Правило 1: Блокировка Telegram  
 **Цель:** Запрет исходящего трафика для мессенджера(в моем случае Браузера).  
@@ -58,7 +58,7 @@ New-NetFirewallRule -DisplayName "Block_Edge_Outbound" -Direction Outbound -Prog
 ### Правило 2: Разрешение RDP  
 **Цель:** Доступ к удалённому рабочему столу.  
 **Скриншот настройки:**  
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/3e158e65-78ea-433b-9155-bc745661f7ba)
 
 New-NetFirewallRule -DisplayName "Allow_RDP" -Direction Inbound -Protocol TCP -LocalPort 3389 -Action Allow
 
@@ -66,7 +66,7 @@ New-NetFirewallRule -DisplayName "Allow_RDP" -Direction Inbound -Protocol TCP -L
 
 ### Правило 3: Логирование событий  
 **Скриншот настройки:**  
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/c79b2bb9-fc78-4589-8108-35742d588d48)
 Set-NetFirewallProfile -LogFileName "C:\logs\pfirewall.log" -LogMaxSize 2048
 ## 5. Защита данных  
 **Включены функции:**  
@@ -88,7 +88,7 @@ Get-WindowsUpdate -Install -AcceptAll
 
 ## 7. Настройка двухфакторной аутентификации  
 **Пример для Microsoft Account:**  
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/c68ca6d3-c50b-4284-a6de-be74711327ea)
 
 ---
 
